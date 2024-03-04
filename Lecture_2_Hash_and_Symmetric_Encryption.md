@@ -53,10 +53,12 @@ node2 --> |"Input"| node4 --> |"Outputs"| node5["Cipher"] --> |"Input"| node6["D
 node2 --> |"Input"| node6 -->|"Outputs"| node7["Message"]
 ```
 
-###### One-Time Pad 
+###### One-Time Pad
 A one-time pad is a system that randomly generates a private key used only once to encrypt and decrypt a message. While using basic symmetric encryption makes it near impossible to detect a pattern in encryption, a one-time pad ensures a higher level of data safety. Note that the cipher produced from encryption contains both the message and the key.
 
 Basically, its like the one time password (2 factor authentication) that is sent to confirm your identity when logging into a system.
 
 ###### Stream Cipher
-A stream cipher is a form of symmetric encryption that uses an XOR operation
+A stream cipher is a form of symmetric encryption that uses an XOR operation. Simply put, it is an encryption that encrypts 'messages' one 'character' at a time. More professionally, it is a cipher the encrypts data one byte at a time. The most common form of this is through XOR (Exclusive Or, one or the other but not both).
+
+Almost like a One-Time Pad, but slightly less secure. That is not to say that it is unsecure, but rather due to its ability to be 'recycled' (used multiple times), it increases the risk of a pattern being detected. However, a stream cipher is more useable due to its efficiency in encrypting and decrypting data in real time. 
